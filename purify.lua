@@ -3,7 +3,7 @@ function align()
   p = peripheral.wrap("front")
   while p == nil or p.getMaxMJReceived("front") ~= 200 do
     turtle.turnRight()
-    p.peripheral.prap("front")
+    p.peripheral.wrap("front")
   end
   print("alignment complete")
   return p
