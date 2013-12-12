@@ -26,6 +26,7 @@ function align()
       print("current dmg value: "..dmg)	 
 	  sleep(5) 
 	end
+	break
   end
   print("serum is synthesized, dropping it into the purifier")
   turtle.suck()
