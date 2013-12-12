@@ -1,7 +1,7 @@
 function align()
   print("aligning turtle")
   p = peripheral.wrap("front")
-  while p.getMaxMJReceived("front") ~= 200 do
+  while p and p.getMaxMJReceived("front") ~= 200 do
     turtle.turnRight()
     p.peripheral.prap("front")
   end
