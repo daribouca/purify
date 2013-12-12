@@ -17,11 +17,12 @@ function align()
 	  sleep(30)
 	  return
 	end
-	do
+	dmg = t["dmg"]
+	while dmg ~= 0 do
 	  sleep(5)
 	  t = p.getStackInSlot(3)
-	  dmg = t["dmg"]
-	until dmg == 0
+	  dmg = t["dmg"]	  
+	end
   end
   turtle.suck()
   turtle.turnRight()
