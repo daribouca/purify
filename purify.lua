@@ -1,12 +1,9 @@
 function align()
   p = peripheral.wrap("front")
-  if p.getMaxMJReceived("front") == 200 then
-    return p
-  end
-  do
-    p.peripheral.prap("front")
+  while p.getMaxMJReceived("front") ~= 200 do
     turtle.turnRight()
-  until p.getMaxMJReceived("front") == 200
+    p.peripheral.prap("front")
+  end
   return p
  end
  
