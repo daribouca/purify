@@ -14,8 +14,8 @@ function align()
     print("checking synthesizer")
     t = p.getStackInSlot(3)
 	if t == nil then
-	  print("nothing in the synthesizer, waiting 30 seconds")
-	  sleep(30)
+	  print("nothing in the synthesizer, waiting 5 seconds")
+	  sleep(5)
 	  return
 	end
 	dmg = t["dmg"]
