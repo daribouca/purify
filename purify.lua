@@ -32,13 +32,17 @@ function align()
   turtle.suck()
   turtle.turnRight()
   turtle.turnRight()
+  turtle.select(1)
   turtle.drop()
   print("waiting 2:30 minutes for purification")
   sleep(150)
   print("serum is purified, dropping it into the chest")
   turtle.suck()
   turtle.turnLeft()
-  turtle.drop()
+  for i = 1, 16 do  
+	turtle.select(i)
+	turtle.drop()
+  end
   turtle.turnLeft()
  end
  
