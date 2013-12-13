@@ -43,6 +43,7 @@ function align()
 	turtle.select(i)
 	turtle.drop()
   end
+  turtle.select(1)
   turtle.turnLeft()
  end
  
