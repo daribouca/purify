@@ -1,5 +1,6 @@
 function align()
   print("aligning turtle")
+  turtle.select(1)
   p = peripheral.wrap("front")
   while p == nil or p.getMaxMJReceived("front") ~= 200 do
     turtle.turnRight()
@@ -29,6 +30,7 @@ function align()
 	break
   end
   print("serum is synthesized, dropping it into the purifier")
+  turtle.select(1)
   turtle.suck()
   turtle.turnRight()
   turtle.turnRight()
@@ -37,6 +39,7 @@ function align()
   print("waiting 2:30 minutes for purification")
   sleep(150)
   print("serum is purified, dropping it into the chest")
+  turtle.select(1)
   turtle.suck()
   turtle.turnLeft()
   for i = 1, 16 do  
