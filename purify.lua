@@ -20,6 +20,7 @@ function align()
  function purify(p)
   while 1 do
     print("checking synthesizer")
+    p = peripheral.wrap("front")
     t = p.getStackInSlot(3)
 	if t == nil then
 	  print("nothing in the synthesizer, waiting 5 seconds")
