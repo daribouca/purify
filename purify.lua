@@ -2,10 +2,17 @@ function align()
   print("aligning turtle")
   turtle.select(1)
   p = peripheral.wrap("front")
-  while p == nil or p.getMaxMJReceived("front") ~= 200 do
-    turtle.turnRight()
-    p = peripheral.wrap("front")
+  if p and p.getMaxMJReceived and p.getMaxMJReceived("front") == 200 then
+    return
   end
+  repeat
+    turtle.turnRight()	
+    p = peripheral.wrap("front")
+  until p and p.getMaxMJReceived and p.getMaxMJReceived("front") == 200
+  -- while p == nil or p.getMaxMJReceived("front") ~= 200 do
+    -- turtle.turnRight()
+    -- p = peripheral.wrap("front")
+  -- end
   print("alignment complete")
   return p
  end
